@@ -1,0 +1,4 @@
+-- drizzle/migrations/add_timestamps.sql
+ALTER TABLE "user_progress"
+ADD COLUMN IF NOT EXISTS "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ADD COLUMN IF NOT EXISTS "last_updated" TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
